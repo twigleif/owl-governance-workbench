@@ -1,0 +1,7 @@
+/* Native control adapters for the frozen accepted Reviews surface. */
+.app-review.rv-page .rv-main .j-review-note,.app-review.rv-page .rv-main .j-review-note-edit,.app-review.rv-page .rv-main .j-review-evidence-block,.app-review.rv-page .rv-main .j-review-outcome{border:0;padding-top:0;margin-top:32px}
+.app-review.rv-page .rv-main .j-review-note-edit textarea{min-height:120px}
+.app-review.rv-page .rv-section-head h3{margin:0}
+.app-review.rv-page .rv-tools .quiet{font-size:11px}
+.app-review.rv-page .j-review-outcome{display:block}
+.workspace-heading .rv-header-crumb{font-size:inherit}

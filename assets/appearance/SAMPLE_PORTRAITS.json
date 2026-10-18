@@ -1,0 +1,9 @@
+{
+  "asset": "sample-portraits.png",
+  "purpose": "Synthetic sample avatars for the separate workspace design proposal only",
+  "generated": "2026-10-16",
+  "method": "Built-in image generation tool",
+  "identities": "All three subjects are fictional. They are not photographs of the operator, real contacts, authenticated users or approvers.",
+  "layout": "One 2172 by 724 pixel horizontal sprite; three equal square tiles. CSS uses 300 percent background size and left, center and right positions. Original file is copied unchanged into this workspace.",
+  "prompt": "Create one single wide horizontal photographic avatar strip asset for a corporate AI governance software UI prototype. Exactly three equally sized square portrait tiles edge to edge in a 3-column 1-row grid, no gaps, no border, no text, no logos. Each tile is a head-and-shoulders professional studio photograph of a distinct fictional adult person, centered face with generous headroom suitable for circular cropping at very small UI avatar sizes. Left: East Asian woman in her 30s with short dark hair and smart understated professional clothes. Center: Black man in his late 30s with close cropped hair and understated professional clothes. Right: white woman in her 40s with shoulder length brown hair and understated professional clothes. Natural friendly expressions, neutral warm pale gray studio backgrounds, realistic skin texture, soft even light, refined monochrome or very low-saturation editorial photography. This is a stock placeholder contact sheet, no actual identity and no decorative UI. Overall image aspect ratio 3:1."
+}

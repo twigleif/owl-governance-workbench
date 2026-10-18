@@ -1,0 +1,2 @@
+# Preserve exact source, fixture and artifact bytes used by integrity checks.
+* -text

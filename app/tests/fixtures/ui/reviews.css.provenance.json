@@ -1,0 +1,19 @@
+{
+  "schema": "owl.ui.fixture.provenance.v1",
+  "purpose": "Independent frozen byte oracle for Reviews stylesheet; tests must check the fixed hash before comparing served bytes",
+  "fixture": {
+    "path": "app/tests/fixtures/ui/reviews.css",
+    "sha256": "cfc20126a9cb4217fd37986df703766c2ffb4c27c4b857014cba4e6965f17c6c",
+    "bytes": 7074
+  },
+  "acceptedArtifact": {
+    "path": "prototypes/candidates/owl-reviews-workspace-preview.html",
+    "sha256": "65336244ae90addae91889f12f36691251626b69ca41998c07e5972a3b6a081a",
+    "bytes": 3155190,
+    "verification": "Measured exact accepted hash and unique literal inclusion of unchanged fixture CSS"
+  },
+  "source": "prototypes/src/reviews-workspace-preview.css",
+  "servedSource": "app/public/reviews.css",
+  "transformations": "None; byte-for-byte copy",
+  "nativePaint": "Unverified; this fixture proves preserved bytes, not native rendered equivalence"
+}

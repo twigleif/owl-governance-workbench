@@ -1,0 +1,59 @@
+# Local records, private references and recovery material
+/runtime/
+/data/
+/workspace-data/
+/references/local/
+/backups/
+/exports/
+/logs/
+/models/
+/secrets/
+/.env
+/.env.*
+!.env.example
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.db
+*.db-wal
+*.db-shm
+*.log
+
+# Local development history and design archives
+/prototypes/
+/snapshots/
+/Suite Updates/
+/docs/DECISIONS.md
+/docs/NEXT_SESSION_HANDOFF.md
+/docs/reviews/
+/docs/product/planning/
+/docs/product/*_PLAN.md
+/app/AGENT_TRIAL.md
+**/.ux-checkpoints/
+/assets/appearance/candidates/
+/assets/brand/candidates/
+
+# Generated environments and build/test outputs
+/outputs/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+dist/
+build/
+coverage/
+.coverage
+.DS_Store
+Thumbs.db
+
+# Only the two fixed fictional PDFs are source inputs.
+/output/*
+!/output/pdf/
+/output/pdf/*
+!/output/pdf/OWL-Docent-Transcript-Access-Brief.pdf
+!/output/pdf/OWL-Docent-Journey-Sample.pdf

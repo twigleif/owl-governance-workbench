@@ -1,0 +1,261 @@
+{
+  "format": 1,
+  "purpose": "Frozen current application source contract captured before physical source relocation; excludes demo pages and runtime/company data.",
+  "nativeSeedSha256": "befa81c8897aad0b5959d6b75799706298e930160e5376985b180b77bf002a1a",
+  "reportTemplate": {
+    "id": "OWL-access-brief-1",
+    "reportlab": "4.4.9",
+    "codeHashes": {
+      "app/render-report.py": "1e38ac295f0d8e5d5173172a11577e26a0d5bb8671b5c00b7eb0a7cc22c9a250",
+      "prototypes/src/assessment-schema.js": "bc49471faaac44aa0a68208379b95c18c2a3d121c41ea0679812b6adafc4504a",
+      "prototypes/src/reference-schema.js": "72f95085eeb135a8656174c1804c33b29c1eade9f80becb59868cec0484dc6b7"
+    }
+  },
+  "assets": [
+    {
+      "url": "/",
+      "contentType": "text/html",
+      "sourceSha256": "c95d52e43adcfbe2c616ec9e515420eeba96aab93b48bd781ba0ad2efc9b50f4",
+      "sourceBytes": 1611,
+      "sessionTokenPlaceholder": "__TOKEN__"
+    },
+    {
+      "url": "/app.css",
+      "contentType": "text/css",
+      "sourceSha256": "ab858c58bdea8c06d042dfeef3fb2af90216712fd0260fe15517f52cc3c19e1a",
+      "sourceBytes": 6598,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/app.js",
+      "contentType": "text/javascript",
+      "sourceSha256": "7ca929385ec515c3f614f8612b57d5a8f0a6c2ed5337c7ffce166578f5843146",
+      "sourceBytes": 48061,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/base.css",
+      "contentType": "text/css",
+      "sourceSha256": "316ae58fdd4f202b54d4d46ab260eba816a56a5f56523ce2fbc993ee5d4b92f9",
+      "sourceBytes": 14152,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/saved-access-brief.pdf",
+      "contentType": "application/pdf",
+      "sourceSha256": "9816857ba3b42074bfef638e35f732bd533af0afd079328efb8444f5408f2b80",
+      "sourceBytes": 47723,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/chat.js",
+      "contentType": "text/javascript",
+      "sourceSha256": "ddb2ddb6ce15767827342f0d87133e1d2ddaa3f1f2a8ee7af6d3d8ae64b792e1",
+      "sourceBytes": 15043,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/chat.css",
+      "contentType": "text/css",
+      "sourceSha256": "ca1a18b8318b155d459ae08d9856c9570a7495c35f0c18990631bb6e11dad0b2",
+      "sourceBytes": 6373,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/chat-workflow.css",
+      "contentType": "text/css",
+      "sourceSha256": "449ae220eff5c5d15b769c68eb453694f35ee5c76b0eaaf1ee0d52c8743bb10c",
+      "sourceBytes": 1659,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/reports.js",
+      "contentType": "text/javascript",
+      "sourceSha256": "b13055c003ceb39726081ff2dfd473866a3f00c99a930ddf2b5f360f74cada2f",
+      "sourceBytes": 11649,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/workspace.js",
+      "contentType": "text/javascript",
+      "sourceSha256": "f6265aceb0d21e8c003b492236d92f1dca24c4d4773b00167944cdbca3d03a86",
+      "sourceBytes": 9798,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/organization-navigation.js",
+      "contentType": "text/javascript",
+      "sourceSha256": "099b1498ec927d255e9adbf72f3a8d6ffb68cd1c83973ea96ab365b1fd035bff",
+      "sourceBytes": 6218,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/organization.js",
+      "contentType": "text/javascript",
+      "sourceSha256": "741787307f0e9a33062de4951e5e02275b3aca4c7430b87dd5d18cf61e401eb9",
+      "sourceBytes": 7867,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/organization.css",
+      "contentType": "text/css",
+      "sourceSha256": "7e0889b95023bcfaad3ae350814d0b10d1029e57c5d30cd92f6a53e759989eae",
+      "sourceBytes": 18714,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/evidence.js",
+      "contentType": "text/javascript",
+      "sourceSha256": "847ba181e8bbf34140c467c8f2e9ecec1aaf0bd85beca61522107a897292a2aa",
+      "sourceBytes": 16912,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/editing.js",
+      "contentType": "text/javascript",
+      "sourceSha256": "7280eceb1ea0dbf0d06eecd49ef63c69028e650b0a985819309595fb9d95c4be",
+      "sourceBytes": 6297,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/activity.js",
+      "contentType": "text/javascript",
+      "sourceSha256": "f76145c04aefd0fd8e5ae080bdb2d189a4dc0f22b193f64543d0bc4d37aac807",
+      "sourceBytes": 6740,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/editing.css",
+      "contentType": "text/css",
+      "sourceSha256": "96df836b39deca26f5152cd6383601ffcad079a00e25d30aab45d29e90733eae",
+      "sourceBytes": 26900,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/review.js",
+      "contentType": "text/javascript",
+      "sourceSha256": "995250c8445648816416e6231f3feca7b557a2c672d31d9bb2851b9e475a1f60",
+      "sourceBytes": 20275,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/review.css",
+      "contentType": "text/css",
+      "sourceSha256": "3d728569cb96aaa90d087e02cc5065905dea128c5ad94c556188ad21e795a639",
+      "sourceBytes": 33430,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/reviews.css",
+      "contentType": "text/css",
+      "sourceSha256": "cfc20126a9cb4217fd37986df703766c2ffb4c27c4b857014cba4e6965f17c6c",
+      "sourceBytes": 7074,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/reviews-adapter.css",
+      "contentType": "text/css",
+      "sourceSha256": "6aff73b7aac295724b6b5ebba4b31116e396131ed19f0d6a49a7d3cc6031368f",
+      "sourceBytes": 592,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/reviews.js",
+      "contentType": "text/javascript",
+      "sourceSha256": "4b967603d471bf645e729a7ff9fc0e01fc7db6561a06ca65f518363d65c4c87d",
+      "sourceBytes": 6116,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/intake.css",
+      "contentType": "text/css",
+      "sourceSha256": "1dbc3970b4809674652055934fdab00fa17ce4988ff73a40edc1a4deb7f0590b",
+      "sourceBytes": 2630,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/intake.js",
+      "contentType": "text/javascript",
+      "sourceSha256": "bc479e09889e14dfc6b8f36d0b72a130762fc2fe21d9849a557ddb0b722d1b01",
+      "sourceBytes": 17321,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/original-client.js",
+      "contentType": "text/javascript",
+      "sourceSha256": "ff8b0c485f4d359de612934455bfa83433321d0faab7d3ebea25d3a8c2c2ec4d",
+      "sourceBytes": 3679,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/popups.js",
+      "contentType": "text/javascript",
+      "sourceSha256": "c7628d5bcc15f8d6e68df01c460298f6908af92ff392351cdb4651fea60b5f63",
+      "sourceBytes": 3677,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/authoring.js",
+      "contentType": "text/javascript",
+      "sourceSha256": "8c5fd6e4fda7b83b67df3b4cfcabf8ab9c1a901f45c344315448cc47668b5532",
+      "sourceBytes": 29228,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/authoring-client.js",
+      "contentType": "text/javascript",
+      "sourceSha256": "a4e481ecc7aa2c904217707699d0d282eb7bd26934fac25808dabfff67648751",
+      "sourceBytes": 7790,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/authoring-format.js",
+      "contentType": "text/javascript",
+      "sourceSha256": "2590ef9742b62f19d58346ba4f8c77179f91b64ab10e1596ee9c82ebe73fcba1",
+      "sourceBytes": 3983,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/authoring.css",
+      "contentType": "text/css",
+      "sourceSha256": "8a4f126c94bd7349248f8a6c4f5e3bef8b24c9800cd2807bfa27340047cc6cc5",
+      "sourceBytes": 8003,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/evidence-drafts.css",
+      "contentType": "text/css",
+      "sourceSha256": "ed4c6b727588be4e469fd878fb295d97c6353186915c1c9df11c79499aac2784",
+      "sourceBytes": 8680,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/change-review.js",
+      "contentType": "text/javascript",
+      "sourceSha256": "4c1dc2f13e75f76a6689d7f22a0b754137329daa6b26c4be5db2fbc51b2e1e2a",
+      "sourceBytes": 4794,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/workspace.css",
+      "contentType": "text/css",
+      "sourceSha256": "d6d4a2e1f40fc1470293d4494907d781fe9c7fb9861cea6b553fe29fceca5eda",
+      "sourceBytes": 17005,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/evidence.css",
+      "contentType": "text/css",
+      "sourceSha256": "ac0b0bbfdf2f8907ecbe4d3a0bd3f07e66fafb7b38de181943595e7f59e8a417",
+      "sourceBytes": 7830,
+      "sessionTokenPlaceholder": null
+    },
+    {
+      "url": "/sample-portraits.png",
+      "contentType": "image/png",
+      "sourceSha256": "999f12729316a4a31da473171878f1f886610545c64d91198208ad6118baf38d",
+      "sourceBytes": 2188797,
+      "sessionTokenPlaceholder": null
+    }
+  ]
+}

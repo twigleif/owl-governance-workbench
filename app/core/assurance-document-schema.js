@@ -1,0 +1,15 @@
+/* Native Assurance ownership. Exact accepted map; source bytes remain in ignored custody. */
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(require('./assurance-document-catalog.js'),require('./document-schema.js'));else root.OWLAssuranceDocumentSchema=factory(root.OWLAssuranceDocumentCatalog,root.OWLDocumentSchema);})(globalThis,function(C,M){
+  'use strict';
+  const freeze=v=>{if(v&&typeof v==='object'){Object.values(v).forEach(freeze);Object.freeze(v);}return v;};
+  const source={id:'aims-assurance-improvement-procedure',name:'AIMS-Assurance-and-Improvement-Procedure.docx',sha256:'4736c05fb591124594a44586242a6f884b891b493a9a35448aa12063b115f051',paragraphs:102,tables:31,inputSurfaces:35,logicalInputs:35};
+  const template={id:source.id,sha256:source.sha256,catalog_sha256:'e1a63e8cba5d4c1d3137d2bc71cc836639d72fab7e31478e81e4d8815ab02e09'};
+  const contextSha256='1104fc87664d1fdde2b5f5c33a082bc83620ef61476ed0007230429dd9e9ba47';
+  const catalogProjection={source:{id:source.id,sha256:source.sha256,paragraphs:102,tables:31,inputSurfaces:35,logicalInputs:35},sections:C.sections.map(({key,label,paragraphs,tables})=>({key,label,paragraphs,tables})),targets:C.fields.map(({key,physical,section,kind,editable,binding,repeat,column,prototype,purpose})=>({key,physical,section,kind,editable,binding,repeat,column,prototype,purpose}))};
+  const roleTargets=['T1R5C2','T1R6C2'],narrativeTargets=['T6R2C1','T8R2C1','T10R2C1','T16R2C1','T19R2C1','T23R2C1'],valueTargets=[...roleTargets,...narrativeTargets],configurationTarget='configurationRecordId';
+  const captureKinds={...Object.fromEntries(roleTargets.map(k=>[k,'role'])),...Object.fromEntries(narrativeTargets.map(k=>[k,'assurance_reference'])),[configurationTarget]:'configuration_reference'},captureTargets=Object.keys(captureKinds);
+  const rowKinds=['history_rows','glossary_rows'],authorKeys=['record_id','document_id','template','values','review','distribution','configuration_record_id',...rowKinds,'capture_bindings','captures'];
+  const referenceFields=['type','title','version','lifecycle','custody','location','access','subject_type','subject_id','origin','owner'];
+  const blankPayload=()=>({record_id:'',document_id:'',template:{...template},values:Object.fromEntries(valueTargets.map(k=>[k,''])),review:{date:'',interval:'',triggers:''},distribution:'',configuration_record_id:'',history_rows:[],glossary_rows:[],capture_bindings:Object.fromEntries(captureTargets.map(k=>[k,''])),captures:[]});
+  return freeze({source,template,contextSha256,catalogProjection,sections:C.sections,catalog:C.fields,referenceContext:C,roleTargets,narrativeTargets,valueTargets,configurationTarget,captureKinds,captureTargets,componentOrder:['role','record'],rowKinds,authorKeys,referenceFields,historyColumns:M.historyColumns,glossaryColumns:M.glossaryColumns,limits:{...M.limits,historyRows:60,glossaryRows:60},editable:M.editable,retained:M.retained,sourceFields:M.sourceFields,artifactTargets:[],blankPayload});
+});

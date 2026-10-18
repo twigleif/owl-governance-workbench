@@ -1,0 +1,96 @@
+{
+  "format": 1,
+  "fixture": "before-original-files",
+  "purpose": "Envelope-1 predecessor used to verify refusal of an original-bearing workspace before reconciliation or mutation.",
+  "provenance": {
+    "kind": "Preserved OWL application source",
+    "sourceDirectory": "runtime/recovery/chat-connection-2026-10-17T02-40-43-176Z/code/app",
+    "sourceBytesPreserved": true
+  },
+  "entryPoint": "store.cjs",
+  "resolution": "The test loader evaluates these preserved sibling modules with application-relative filenames/directories and fixture sibling precedence. The exact historical sharedImports identifiers are aliased by app/tests/support/legacy-imports.cjs to their unchanged sibling filenames under app/core/. Node builtins and other application imports retain normal resolution; these files are not a standalone application.",
+  "files": [
+    {
+      "path": "activity.cjs",
+      "bytes": 10976,
+      "sha256": "2ba565c0aa14f731d1967bf7d04ddeda062d5cd27777e5cf2cd27ba4ea1065f3",
+      "siblingImports": [],
+      "sharedImports": [
+        "../prototypes/src/assessment-schema.js",
+        "../prototypes/src/document-template-registry.js",
+        "../prototypes/src/reference-schema.js",
+        "../prototypes/src/register-core.js"
+      ],
+      "builtins": [
+        "node:crypto"
+      ]
+    },
+    {
+      "path": "conversations.cjs",
+      "bytes": 9113,
+      "sha256": "eca64c5ad2c533ff3ebc36c0e547a5e84975993e3888588e81a3d00fcc71a675",
+      "siblingImports": [],
+      "sharedImports": [],
+      "builtins": []
+    },
+    {
+      "path": "evidence-use.cjs",
+      "bytes": 5100,
+      "sha256": "9fb2284079f599ebd0fb2e94b7ad9492208248d3b6672db7ab698436ae5fe8c6",
+      "siblingImports": [
+        "reviews.cjs"
+      ],
+      "sharedImports": [
+        "../prototypes/src/assessment-core.js",
+        "../prototypes/src/assessment-schema.js"
+      ],
+      "builtins": []
+    },
+    {
+      "path": "reports.cjs",
+      "bytes": 9614,
+      "sha256": "68e452654367988ceb3b68ef7e4c8fbbd45b67cbfcd665db25070af7c6e85288",
+      "siblingImports": [],
+      "sharedImports": [
+        "../prototypes/src/assessment-core.js"
+      ],
+      "builtins": [
+        "node:crypto"
+      ]
+    },
+    {
+      "path": "reviews.cjs",
+      "bytes": 1894,
+      "sha256": "073f843cf0c091cc1e8e60efcff96e88f80aad1d4afefca0e9c50e2daa6ec5ae",
+      "siblingImports": [],
+      "sharedImports": [
+        "../prototypes/src/assessment-core.js"
+      ],
+      "builtins": []
+    },
+    {
+      "path": "store.cjs",
+      "bytes": 12886,
+      "sha256": "4bf9aebdacbfaefb608f40d2908ea7534e6f0eb39d2b8f9b7bd662695dc0f396",
+      "siblingImports": [
+        "activity.cjs",
+        "conversations.cjs",
+        "evidence-use.cjs",
+        "reports.cjs",
+        "reviews.cjs"
+      ],
+      "sharedImports": [
+        "../prototypes/src/assessment-core.js",
+        "../prototypes/src/docent-working-case.cjs",
+        "../prototypes/src/document-core.js",
+        "../prototypes/src/register-core.js"
+      ],
+      "builtins": [
+        "node:crypto",
+        "node:fs",
+        "node:path",
+        "node:sqlite"
+      ]
+    }
+  ]
+}

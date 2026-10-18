@@ -1,0 +1,56 @@
+{
+  "schema": "owl.styles.relocation.v1",
+  "purpose": "Maintain existing served stylesheet bytes and URL identities while moving runtime ownership into app/",
+  "transformations": "None; byte-for-byte copies; old design sources retained locally",
+  "copies": [
+    {
+      "urlPath": "/base.css",
+      "source": "prototypes/src/docent-workspace-preview.css",
+      "target": "app/public/styles/docent-workspace-preview.css",
+      "sha256": "316ae58fdd4f202b54d4d46ab260eba816a56a5f56523ce2fbc993ee5d4b92f9",
+      "bytes": 14152
+    },
+    {
+      "urlPath": "/chat.css",
+      "source": "prototypes/src/docent-agent-preview.css",
+      "target": "app/public/styles/docent-agent-preview.css",
+      "sha256": "ca1a18b8318b155d459ae08d9856c9570a7495c35f0c18990631bb6e11dad0b2",
+      "bytes": 6373
+    },
+    {
+      "urlPath": "/chat-workflow.css",
+      "source": "prototypes/src/chat-workflow-preview.css",
+      "target": "app/public/styles/chat-workflow-preview.css",
+      "sha256": "449ae220eff5c5d15b769c68eb453694f35ee5c76b0eaaf1ee0d52c8743bb10c",
+      "bytes": 1659
+    },
+    {
+      "urlPath": "/authoring.css",
+      "source": "prototypes/src/system-card-preview.css",
+      "target": "app/public/styles/system-card-preview.css",
+      "sha256": "8a4f126c94bd7349248f8a6c4f5e3bef8b24c9800cd2807bfa27340047cc6cc5",
+      "bytes": 8003
+    },
+    {
+      "urlPath": "/evidence-drafts.css",
+      "source": "prototypes/src/evidence-drafts-preview.css",
+      "target": "app/public/styles/evidence-drafts-preview.css",
+      "sha256": "ed4c6b727588be4e469fd878fb295d97c6353186915c1c9df11c79499aac2784",
+      "bytes": 8680
+    },
+    {
+      "urlPath": "/workspace.css",
+      "source": "prototypes/src/workspace-redesign-preview.css",
+      "target": "app/public/styles/workspace-redesign-preview.css",
+      "sha256": "d6d4a2e1f40fc1470293d4494907d781fe9c7fb9861cea6b553fe29fceca5eda",
+      "bytes": 17005
+    },
+    {
+      "urlPath": "/evidence.css",
+      "source": "prototypes/src/evidence-inventory-preview.css",
+      "target": "app/public/styles/evidence-inventory-preview.css",
+      "sha256": "ac0b0bbfdf2f8907ecbe4d3a0bd3f07e66fafb7b38de181943595e7f59e8a417",
+      "bytes": 7830
+    }
+  ]
+}

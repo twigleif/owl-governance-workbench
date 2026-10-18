@@ -1,0 +1,300 @@
+{
+  "format": 1,
+  "purpose": "Application-owned module provenance. Historical paths are source identity labels; the application reads the current files listed here.",
+  "files": [
+    {
+      "path": "assessment-core.js",
+      "source": "prototypes/src/assessment-core.js",
+      "bytes": 21570,
+      "sha256": "a993fde024a377f3d650b839bdbbb46423a91fa56df18ed426bce60263110864"
+    },
+    {
+      "path": "assessment-schema.js",
+      "source": "prototypes/src/assessment-schema.js",
+      "bytes": 24400,
+      "sha256": "bc49471faaac44aa0a68208379b95c18c2a3d121c41ea0679812b6adafc4504a"
+    },
+    {
+      "path": "assurance-document-body.js",
+      "source": "prototypes/src/assurance-document-body.js",
+      "bytes": 15532,
+      "sha256": "048e7b233a27ce2fd2dbdb6af3b06a647842700f6eee0577c3b63664921c219c"
+    },
+    {
+      "path": "assurance-document-catalog.js",
+      "source": "prototypes/src/assurance-document-catalog.js",
+      "bytes": 73093,
+      "sha256": "014d26e02430fcc3ecc9c23678c65e93e5afd88476ec254f3afae047b663f978"
+    },
+    {
+      "path": "assurance-document-schema.js",
+      "source": "prototypes/src/assurance-document-schema.js",
+      "bytes": 3022,
+      "sha256": "97ba6e04ee8c2c11ce8131f9222b16daa763139be0d06e1232c29656a4824c80"
+    },
+    {
+      "path": "controls-starter-catalog.js",
+      "source": "prototypes/src/controls-starter-catalog.js",
+      "bytes": 23892,
+      "sha256": "5fd4cce653272cc952ab6e44dfc14ccb64331ea37f86e4e233089f92ddc24819"
+    },
+    {
+      "path": "docent-enriched-example.cjs",
+      "source": "prototypes/src/docent-enriched-example.cjs",
+      "bytes": 12595,
+      "sha256": "d2869645db609e5005073c08092bfb9e0bd6fb5e794767ff1c22eb8f203018c5"
+    },
+    {
+      "path": "docent-simulated-case.js",
+      "source": "prototypes/src/docent-simulated-case.js",
+      "bytes": 27074,
+      "sha256": "543b661e4e0817d2e5c52b92232e85a82e37638ff0adf5ec79173e607c32794f"
+    },
+    {
+      "path": "docent-working-case.cjs",
+      "source": "prototypes/src/docent-working-case.cjs",
+      "bytes": 8647,
+      "sha256": "507884a643714a3aa0bef1cb2c1d76025a8dc1b7c8a308ccea6d02272f5486bd"
+    },
+    {
+      "path": "document-core.js",
+      "source": "prototypes/src/document-core.js",
+      "bytes": 86271,
+      "sha256": "3b76c9b8c90405b07f924e13beb78f613310f4e536bd6ca7780f0cd3a06c4f3d"
+    },
+    {
+      "path": "document-drafting-catalog.js",
+      "source": "prototypes/src/document-drafting-catalog.js",
+      "bytes": 26221,
+      "sha256": "6e946026f7ce1a282eea5aa876ffb16e4f4c620127f4ac4ccfcc1b06fd7ac3c5"
+    },
+    {
+      "path": "document-schema.js",
+      "source": "prototypes/src/document-schema.js",
+      "bytes": 3259,
+      "sha256": "54090f2ba25c38c71f303e6ec9345601d440fc62fd36043f50b82ed367f16e45"
+    },
+    {
+      "path": "document-template-registry.js",
+      "source": "prototypes/src/document-template-registry.js",
+      "bytes": 1526,
+      "sha256": "4f93cb1cd84da06efefba90ba91c1166d4522c44f1bc6ae1799ecab2d842227d"
+    },
+    {
+      "path": "dropdown-core.js",
+      "source": "prototypes/src/dropdown-core.js",
+      "bytes": 5595,
+      "sha256": "fa4ef86002d9641100113548a617925237e5c732ee15c2b0696c83317fd9eb5d"
+    },
+    {
+      "path": "evidence-drafts-model.js",
+      "source": "prototypes/src/evidence-drafts-model.js",
+      "bytes": 6891,
+      "sha256": "c4cb0966ce6a4a745fe2ca670a1aa448a011290ee8be811916fccbe8858e5bf2"
+    },
+    {
+      "path": "lifecycle-document-body.js",
+      "source": "prototypes/src/lifecycle-document-body.js",
+      "bytes": 15787,
+      "sha256": "a0e47524c3e187d50a0f4bfcce13d0fef3ccd8ccafa9642a7dd09c15c83ef53a"
+    },
+    {
+      "path": "lifecycle-document-catalog.js",
+      "source": "prototypes/src/lifecycle-document-catalog.js",
+      "bytes": 64772,
+      "sha256": "08720b29e83a7648823baaaedf80f4f48c703071260fc97f1bcc0ee2c5dd2be9"
+    },
+    {
+      "path": "lifecycle-document-schema.js",
+      "source": "prototypes/src/lifecycle-document-schema.js",
+      "bytes": 3025,
+      "sha256": "ec2aa0a33e3d333f510640169e383412ad77aeb3d16e8c410d30cbaad6fc7bcf"
+    },
+    {
+      "path": "organization-core.js",
+      "source": "prototypes/src/organization-core.js",
+      "bytes": 8674,
+      "sha256": "40953d1eb4719b34f53fd1ba797acdaaabc0d7cceb99ae1dd8771fce4ff65430"
+    },
+    {
+      "path": "owner-assessment-layout.js",
+      "source": "prototypes/src/owner-assessment-layout.js",
+      "bytes": 6123,
+      "sha256": "7a47906e11ee279425508b6cf345f6ac8d816e4a927c90eec3c86962586d1e36"
+    },
+    {
+      "path": "owner-assessment-profiles.js",
+      "source": "prototypes/src/owner-assessment-profiles.js",
+      "bytes": 46408,
+      "sha256": "3c5840db280937f005ddc1e20d4f760665600c5dcda3853f1cee407536ca9f8d"
+    },
+    {
+      "path": "owner-assessment-units-layout.js",
+      "source": "prototypes/src/owner-assessment-units-layout.js",
+      "bytes": 6184,
+      "sha256": "a8899235076ed63a52968313771d428611fb04b99378d6a395d984b38988aff2"
+    },
+    {
+      "path": "owner-assessment-units-profiles.js",
+      "source": "prototypes/src/owner-assessment-units-profiles.js",
+      "bytes": 78356,
+      "sha256": "68652d35112f91065fefac6f28d26a3e769f5f5c7ab1249b595ca5e2d6939de3"
+    },
+    {
+      "path": "owner-context-date-layout.js",
+      "source": "prototypes/src/owner-context-date-layout.js",
+      "bytes": 7107,
+      "sha256": "04944e2799886c51c872563a011ca0d004be07a3399eb77642ef7469285352ce"
+    },
+    {
+      "path": "owner-context-date-profiles.js",
+      "source": "prototypes/src/owner-context-date-profiles.js",
+      "bytes": 67559,
+      "sha256": "3b678c351445a0cf684ce256d441d302dcfd0aa4502f788d60a74c826eb96e5b"
+    },
+    {
+      "path": "owner-document-layout.js",
+      "source": "prototypes/src/owner-document-layout.js",
+      "bytes": 6179,
+      "sha256": "53e895be5ecab9ca3449cf2331996f064d55b19df6a5b02ac7653738b4cacb7d"
+    },
+    {
+      "path": "owner-document-profiles.js",
+      "source": "prototypes/src/owner-document-profiles.js",
+      "bytes": 134623,
+      "sha256": "131edfe02bc072f196ea24f776bf472cbe18a9594f2ab79ea638d14e771d486f"
+    },
+    {
+      "path": "owner-inputs-core.js",
+      "source": "prototypes/src/owner-inputs-core.js",
+      "bytes": 37256,
+      "sha256": "88bad9338e5b22399966b3ac35a2b7a99379bc9751fa59c98f89d508cc421915"
+    },
+    {
+      "path": "owner-inputs-schema.js",
+      "source": "prototypes/src/owner-inputs-schema.js",
+      "bytes": 75830,
+      "sha256": "7cfaf30514ac25af5bdc84430af247977577112a262e098f7c507fa088f2d47e"
+    },
+    {
+      "path": "owner-register-profiles.js",
+      "source": "prototypes/src/owner-register-profiles.js",
+      "bytes": 84359,
+      "sha256": "a83cdf9c6b811720fde658071796e9931253eb552b093c3e01a315ea723468e5"
+    },
+    {
+      "path": "policy-document-body.js",
+      "source": "prototypes/src/policy-document-body.js",
+      "bytes": 15101,
+      "sha256": "e85af0043185b7caf9a0cdf5d0ad0a67b8b58fefae78b1b6a1bdbb6c4542463a"
+    },
+    {
+      "path": "policy-document-schema.js",
+      "source": "prototypes/src/policy-document-schema.js",
+      "bytes": 2922,
+      "sha256": "f12c30117ff49f08c8097b349fbb2e786100e7f3a4ce2ee9e3323e1fc97f0a75"
+    },
+    {
+      "path": "policy-drafting-catalog.js",
+      "source": "prototypes/src/policy-drafting-catalog.js",
+      "bytes": 11076,
+      "sha256": "e4bfddcd70a92a3d73aaf847bffb2130ec8f1aa1a9e0fdded2ec9cdd4abc2d36"
+    },
+    {
+      "path": "reference-schema.js",
+      "source": "prototypes/src/reference-schema.js",
+      "bytes": 49560,
+      "sha256": "72f95085eeb135a8656174c1804c33b29c1eade9f80becb59868cec0484dc6b7"
+    },
+    {
+      "path": "register-change-review.js",
+      "source": "prototypes/src/register-change-review.js",
+      "bytes": 4794,
+      "sha256": "4c1dc2f13e75f76a6689d7f22a0b754137329daa6b26c4be5db2fbc51b2e1e2a"
+    },
+    {
+      "path": "register-control-core.js",
+      "source": "prototypes/src/register-control-core.js",
+      "bytes": 7008,
+      "sha256": "2536a0b1c92a790936f7b1aebab8fd83950f10839fa153447c83050bd93be6fd"
+    },
+    {
+      "path": "register-core.js",
+      "source": "prototypes/src/register-core.js",
+      "bytes": 80614,
+      "sha256": "f45c67b8699deb4d8026d78b718063b087ff794cdb80b1fff863989052305601"
+    },
+    {
+      "path": "register-references.js",
+      "source": "prototypes/src/register-references.js",
+      "bytes": 7762,
+      "sha256": "3db2c6601dc79d1d9cd7e79de36a684e044f81f3d0ac8bb16b58b128006cb2a2"
+    },
+    {
+      "path": "register-review-issue-model.js",
+      "source": "prototypes/src/register-review-issue-model.js",
+      "bytes": 8194,
+      "sha256": "f192cbc0b7b457186117f69d66f826f21a1cf0782763bd44fa04b614d48facbf"
+    },
+    {
+      "path": "risk-controls-core.js",
+      "source": "prototypes/src/risk-controls-core.js",
+      "bytes": 26552,
+      "sha256": "cd3a6a8537242612ca347a6040cc3fd5e3fa845b584f24d1e26648ccfdc3692f"
+    },
+    {
+      "path": "risk-document-body.js",
+      "source": "prototypes/src/risk-document-body.js",
+      "bytes": 14389,
+      "sha256": "0b5db9e2b52d1ce52ce10312e966a427b360f32e62279c5ed0c175853dd8d922"
+    },
+    {
+      "path": "risk-document-catalog.js",
+      "source": "prototypes/src/risk-document-catalog.js",
+      "bytes": 43360,
+      "sha256": "9f406547b4382cb619c32f02d2e36722df1284c464b6e9e80b39a7f9304d31f8"
+    },
+    {
+      "path": "risk-document-schema.js",
+      "source": "prototypes/src/risk-document-schema.js",
+      "bytes": 2838,
+      "sha256": "d5930059f5e145977c17cdb704af5851649369b074622b8ff865c432565673ac"
+    },
+    {
+      "path": "saved-text.js",
+      "source": "prototypes/src/saved-text.js",
+      "bytes": 969,
+      "sha256": "50349da965ce5f4b4cc019f79562e190720892078128ef280371bbfc800fb020"
+    },
+    {
+      "path": "soa-artifact-core.js",
+      "source": "prototypes/src/soa-artifact-core.js",
+      "bytes": 20433,
+      "sha256": "da82ce81214c3069d8599c5b9799b54a2d54bd0151a238dfbf9f79a3015116db"
+    },
+    {
+      "path": "soa-drafting-core.js",
+      "source": "prototypes/src/soa-drafting-core.js",
+      "bytes": 12656,
+      "sha256": "2a80b7dfcdc9397be03999a9014b9b77aaeb1349231924c183a95f0cbc62cade"
+    },
+    {
+      "path": "soa-source.js",
+      "source": "prototypes/src/soa-source.js",
+      "bytes": 12676,
+      "sha256": "7e0cc179e40b9a665a87583669ed96370b6424f793f175845365d695bda24ab2"
+    },
+    {
+      "path": "system-card-preview-model.js",
+      "source": "prototypes/src/system-card-preview-model.js",
+      "bytes": 7818,
+      "sha256": "fca885f9a1d0175080b2489c7e6c4496d417d0f613f1f404b9a2209d15a50833"
+    },
+    {
+      "path": "team-access-model.js",
+      "source": "prototypes/src/team-access-model.js",
+      "bytes": 8439,
+      "sha256": "8bf1fff7779791b8776c9c9358de4f00c824ccc39bd9ac09c5b0675e32776581"
+    }
+  ]
+}

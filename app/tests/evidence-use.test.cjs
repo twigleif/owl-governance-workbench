@@ -1,0 +1,32 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const {createStore,digest}=require('../store.cjs'),{project}=require('../workspace-view.cjs'),S=require('../core/assessment-schema.js');
+const directory=path.resolve(__dirname,'../../runtime/test-artifacts/evidence-connection');fs.mkdirSync(directory,{recursive:true});
+function request(s,changes={},command='save_evidence_use'){
+ const v=s.view(),p=project(s),fields={...S.blank('evidence'),id:p.evidenceLinks.suggestedId,item_type:'Review item',item_id:v.review.id,record_id:'SIM-DOCENT-REC-PLAN-001',claim:'The draft sharing criterion requires defining the audience before sharing.',locator:'C2: proposed sharing criterion',result:'Not reviewed',access:'Not checked'};
+ return{id:crypto.randomUUID(),command,expectedRevision:v.revision,expectedDraftRevision:v.meta.draftRevision,values:{entryRevision:v.assessment.revision,rowRevision:0,rowId:null,sourceRevision:p.recordRevisions[fields.record_id],sourceSha256:p.files[fields.record_id].sha256,fields,...changes}};
+}
+test('Evidence Save survives reopen, reserves once, captures source and reaches frozen PDF basis',()=>{
+ const file=path.join(directory,crypto.randomUUID()+'.sqlite');let s=createStore(file,{seed:true});const old=s.read().workspace,req=request(s),id=req.values.fields.id,result=s.operation(req),saved=s.read();assert.equal(result.status,'saved');assert(s.activity.list({subject:s.view().review.id,type:'created'}).events.some(x=>x.subjects.includes(id)));assert.deepEqual(s.operation(req),result);assert.equal(saved.workspace.revision,old.revision+1);assert.deepEqual(saved.workspace.references,old.references);assert.equal(saved.workspace.assessments.entries[0].evidence.length,2);assert.equal(s.view().review.result,'Not reviewed');
+ const row=project(s).evidenceLinks.rows.find(r=>r.values.id===id);assert.equal(row.capture.target_revision,2);assert.equal(row.values.access,'Not checked');assert.equal(project(s).evidenceLinks.suggestedId,'SIM-DOCENT-EVID-003');const created=s.activity.list({type:'created'}).events.find(x=>x.subjects.includes(id));assert(created);const captured=s.activity.get(created.id).items.find(i=>i.key==='Captured source basis');assert.equal(captured.before,'');assert(captured.after.includes('draft 0.2'));s.close();s=createStore(file);assert.equal(digest(s.read()),digest(saved));const frozen=s.reports.freeze({id:'test'});assert.equal(frozen.evidenceUses.length,1);assert.equal(frozen.evidenceUses[0].sourceSha256,req.values.sourceSha256);
+ const noOp=request(s,{rowId:id,rowRevision:row.revision,entryRevision:s.view().assessment.revision,fields:row.values});assert.equal(s.operation(noOp).status,'no-change');assert.equal(s.view().revision,result.revision);s.close();
+});
+test('Duplicate, reused ID, stale source, evaluation and unsupported target reject atomically',()=>{
+ const s=createStore(':memory:',{seed:true}),r=request(s);s.operation(r);const baseline=digest(s.read());
+ const duplicate=request(s);assert.throws(()=>s.operation(duplicate),e=>e.code==='evidence-duplicate'&&e.existingId===r.values.fields.id);
+ const used=request(s);used.values.fields.id=r.values.fields.id;assert.throws(()=>s.operation(used),e=>e.code==='evidence-id');
+ for(const change of ['sourceRevision','sourceSha256','target','result']){const x=request(s);x.values.fields.claim+=' '+change;if(change==='target')x.values.fields.item_id='SIM-DOCENT-RVW-001';else if(change==='result')x.values.fields.result='Supports';else x.values[change]=change==='sourceRevision'?0:'bad';assert.throws(()=>s.operation(x));assert.equal(digest(s.read()),baseline);}
+ s.close();
+});
+test('Remove and restore retain ID/source/history; failed writes and lost responses recover once',()=>{
+ let failure='';const s=createStore(':memory:',{seed:true,fault:phase=>{if(phase===failure)throw Error('injected');}}),r=request(s);failure='before-commit';assert.throws(()=>s.operation(r));assert.equal(project(s).evidenceLinks.suggestedId,r.values.fields.id);failure='after-commit';assert.throws(()=>s.operation(r));assert(s.receipt(r.id));failure='';assert.equal(s.operation(r).status,'saved');
+ const lifecycle=command=>{const row=project(s).evidenceLinks.rows.find(x=>x.values.id===r.values.fields.id);return request(s,{rowId:row.values.id,rowRevision:row.revision},command);};
+ s.operation(lifecycle('remove_evidence_use'));assert.equal(s.reports.freeze({id:'test'}).evidenceUses.length,0);assert(project(s).evidenceLinks.rows.find(x=>x.values.id===r.values.fields.id).deleted_at);assert(s.activity.list({type:'deleted'}).events.some(x=>x.subjects.includes(r.values.fields.id)));
+ s.operation(lifecycle('restore_evidence_use'));assert.equal(s.reports.freeze({id:'test'}).evidenceUses.length,1);assert(s.activity.list({type:'restored'}).events.some(x=>x.subjects.includes(r.values.fields.id)));assert.equal(s.view().review.result,'Not reviewed');s.close();
+});
+test('changed original bytes and stale row bases refuse a write/new PDF while provider context stays bounded',()=>{
+ const s=createStore(':memory:',{seed:true}),r=request(s),before=digest(s.read()),read=fs.readFileSync,original=path.resolve(__dirname,'../../docs/product/examples/docent-case/enriched-example/proposed-pilot-plan.md');
+ try{fs.readFileSync=function(file,...args){const value=read.call(this,file,...args);return path.resolve(String(file))===original?String(value)+'Changed outside admission.':value;};assert.throws(()=>s.operation(r),e=>e.code==='evidence-source');assert.throws(()=>s.reports.freeze({id:'test'}),e=>e.code==='pdf-basis');assert.equal(digest(s.read()),before);}finally{fs.readFileSync=read;}
+ s.operation(r);const saved=s.evidenceProjection().rows.find(x=>x.values.id===r.values.fields.id),edit=request(s,{rowId:saved.values.id,rowRevision:0,fields:{...saved.values,claim:'Stale edit'}}),stable=digest(s.read());assert.throws(()=>s.operation(edit),e=>e.code==='evidence-conflict');assert.equal(digest(s.read()),stable);const raw=s.read().workspace.assessments.entries[0].evidence[0];const other=request(s,{rowId:raw.values.id,rowRevision:raw.revision,fields:{...saved.values,id:raw.values.id}});assert.throws(()=>s.operation(other),e=>e.code==='evidence-scope');assert(!JSON.stringify(require('../codex.cjs').taskProjection(s.view())).includes(r.values.fields.claim));s.close();
+});
+module.exports={request};

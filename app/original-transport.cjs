@@ -1,0 +1,11 @@
+'use strict';
+const {MAX_FILE,filename,sha}=require('./originals.cjs');
+async function multipart(req){
+ const match=/^multipart\/form-data;\s*boundary=(?:"([A-Za-z0-9'()+_,.\/:=? -]{1,70})"|([A-Za-z0-9'()+_,.\/:=?-]{1,70}))$/.exec(req.headers['content-type']||'');if(!match)throw Error('Choose one file using Add file.');
+ const chunks=[];let size=0;for await(const b of req){size+=b.length;if(size>MAX_FILE+65536)throw Error('The upload exceeds 20 MB. Choose a smaller file.');chunks.push(b);}const body=Buffer.concat(chunks),boundary=Buffer.from('--'+(match[1]||match[2])),delimiter=Buffer.from('\r\n'+boundary),parts=[];let pos=boundary.length;
+ if(!body.subarray(0,boundary.length).equals(boundary))throw Error('The upload is incomplete. Choose the file again.');
+ while(body.subarray(pos,pos+2).toString()!=='--'){if(body.subarray(pos,pos+2).toString()!=='\r\n'||parts.length>=2)throw Error('Upload exactly one file and its source details.');pos+=2;const end=body.indexOf('\r\n\r\n',pos);if(end<pos||end-pos>8192)throw Error('The upload headers are invalid.');const headers=body.subarray(pos,end).toString('utf8'),next=body.indexOf(delimiter,end+4);if(next<0)throw Error('The upload ended before the file was complete.');const disposition=/content-disposition:\s*form-data;\s*name="(command|file)"(?:;\s*filename="([^"\r\n]*)")?/i.exec(headers);if(!disposition||parts.some(p=>p.name===disposition[1]))throw Error('Upload one command and one file.');parts.push({name:disposition[1],filename:filename(disposition[2]),body:body.subarray(end+4,next)});pos=next+delimiter.length;}
+ if(!/^--(?:\r\n)?$/.test(body.subarray(pos).toString())||parts.length!==2)throw Error('The upload has extra or incomplete data.');const command=parts.find(p=>p.name==='command'),file=parts.find(p=>p.name==='file');if(!command||!file||command.body.length>20000||!file.body.length||file.body.length>MAX_FILE)throw Error('Choose one non-empty file up to 20 MB and keep source details within their limits.');
+ const request=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(command.body));if(request.command!=='save_original')throw Error('This endpoint only stores an original file.');return{request,file:{body:Buffer.from(file.body),name:file.filename,sha256:sha(file.body)}};
+}
+module.exports={multipart};

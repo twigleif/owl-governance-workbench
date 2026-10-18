@@ -1,0 +1,75 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 4058 >>
+stream
+BT /F2 22 Tf 0.4078 0.4510 0.3725 rg 1 0 0 1 44 780 Tm (OWL) Tj ET
+BT /F1 8 Tf 0.4314 0.4588 0.4078 rg 1 0 0 1 109 789 Tm (GOVERNANCE WORKSPACE) Tj ET
+BT /F1 8 Tf 0.4314 0.4588 0.4078 rg 1 0 0 1 370 789 Tm (FICTIONAL DESIGN SAMPLE) Tj ET
+0.8863 0.9020 0.8667 rg 44 769 507 1 re f
+BT /F2 22 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 722 Tm (Docent transcript access brief) Tj ET
+BT /F1 11 Tf 0.4314 0.4588 0.4078 rg 1 0 0 1 44 698 Tm (Research team \(simulated\)) Tj ET
+BT /F1 9 Tf 0.4314 0.4588 0.4078 rg 1 0 0 1 44 682 Tm (Docent / transcript access | Preview revision 1) Tj ET
+0.9333 0.9490 0.9137 rg 44 627 507 38 re f
+BT /F2 10 Tf 0.4078 0.4510 0.3725 rg 1 0 0 1 57 642 Tm (DRAFT - Not reviewed) Tj ET
+BT /F2 11 Tf 0.4078 0.4510 0.3725 rg 1 0 0 1 44 596 Tm (Review scope) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 578 Tm (SIM-DOCENT-AI-001 - Analyse agent transcripts to support research and prepare evidence for) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 564 Tm (human review in this simulated case.) Tj ET
+BT /F2 11 Tf 0.4078 0.4510 0.3725 rg 1 0 0 1 44 542 Tm (Requirement and control) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 524 Tm (SIM-DOCENT-REQ-002 - internal pilot sharing criterion. SIM-DOCENT-CTRL-002 - Check who can) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 510 Tm (access transcripts. Organization implementation: Not assessed.) Tj ET
+BT /F2 11 Tf 0.4078 0.4510 0.3725 rg 1 0 0 1 44 488 Tm (Assessment result) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 470 Tm (Not reviewed.) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 456 Tm (No rationale recorded.) Tj ET
+BT /F2 11 Tf 0.4078 0.4510 0.3725 rg 1 0 0 1 44 434 Tm (Evidence and limitations) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 416 Tm (Planning material is available. Intended audience, actual grants, a performed method/check and) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 402 Tm (retained operating result remain missing.) Tj ET
+BT /F2 11 Tf 0.4078 0.4510 0.3725 rg 1 0 0 1 44 380 Tm (Follow-up) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 362 Tm (SIM-DOCENT-ACT-002 - Planned. Retain the proposed audience and a reviewable permission-check) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 348 Tm (method; record unresolved access questions.) Tj ET
+BT /F2 11 Tf 0.4078 0.4510 0.3725 rg 1 0 0 1 44 326 Tm (Assurance and human decisions) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 308 Tm (The assurance activity is Planned. No operating result, independent assurance conclusion, risk) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 294 Tm (acceptance or issued Decision is represented.) Tj ET
+BT /F2 11 Tf 0.4078 0.4510 0.3725 rg 1 0 0 1 44 272 Tm (Framework basis) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 254 Tm (ISO/IEC 42001:2023; NIST AI RMF 1.0 \(2023\). ISO/NIST references are contextual examples, not a) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 240 Tm (completed or validated criteria assessment.) Tj ET
+BT /F2 11 Tf 0.4078 0.4510 0.3725 rg 1 0 0 1 44 218 Tm (Source and version basis) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 200 Tm (SIM-DOCENT-REC-PLAN-001 - draft 0.2 \227 example only. Preview source epoch 1. The original) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 186 Tm (case remains incomplete.) Tj ET
+BT /F2 11 Tf 0.4078 0.4510 0.3725 rg 1 0 0 1 44 164 Tm (Scope and limitations) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 146 Tm (Illustrative workflow only. This report records the selected in-memory preview snapshot. It is) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 132 Tm (not an issued organizational assessment, operating proof, approval, certification or regulatory) Tj ET
+BT /F1 10 Tf 0.2000 0.2000 0.2000 rg 1 0 0 1 44 118 Tm (conclusion.) Tj ET
+0.8863 0.9020 0.8667 rg 44 66 507 1 re f
+BT /F1 8 Tf 0.4314 0.4588 0.4078 rg 1 0 0 1 44 43 Tm (OWL | Sample snapshot | docent-preview-r1-e1) Tj ET
+BT /F1 8 Tf 0.4314 0.4588 0.4078 rg 1 0 0 1 520 43 Tm (1 / 1) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000212 00000 n 
+0000000314 00000 n 
+0000004424 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+4560
+%%EOF

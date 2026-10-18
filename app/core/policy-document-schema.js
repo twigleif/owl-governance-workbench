@@ -1,0 +1,14 @@
+/* Reviewed D-255 Policy ownership and exact catalog pin. No protected source body. */
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(require('./policy-drafting-catalog.js'),require('./document-schema.js'));else root.OWLPolicyDocumentSchema=factory(root.OWLPolicyDraftingCatalog,root.OWLDocumentSchema);})(globalThis,function(C,M){
+  'use strict';
+  const freeze=value=>{if(value&&typeof value==='object'){Object.values(value).forEach(freeze);Object.freeze(value);}return value;};
+  const source={id:'ai-governance-policy-d255',name:'AI-Governance-Policy-D255.docx',sha256:'5cfe7c0f990d75300f1b72228a0542c144ff2220a9f9856b7b244913b50ebdc9',paragraphs:88,tables:16,inputSurfaces:45,logicalInputs:46};
+  const template={id:source.id,sha256:source.sha256,catalog_sha256:'b037abdf2da5be27d1fab97be1a2fa12596c1faefa52fc4260f6d379b3c696a6'};
+  const catalogProjection={source:{id:source.id,sha256:source.sha256,paragraphs:88,tables:16,inputSurfaces:45,logicalInputs:46},sections:C.sections.map(({key,label,paragraphs,tables})=>({key,label,paragraphs,tables})),targets:C.fields.map(({key,physical,section,kind,editable,binding,repeat,column,prototype,purpose})=>({key,physical,section,kind,editable,binding,repeat,column,prototype,purpose}))};
+  const roleTargets=['T1R5C2','T1R6C2'],narrativeTargets=['T4R2C1','T5R2C1','T8R2C1','T10R2C1','T11R2C1','T13R2C1'],valueTargets=[...roleTargets,...narrativeTargets],artifactTargets=['T14R2C3','T14R3C3','T14R4C3','T14R5C3','T14R6C3P1','T14R6C3P2','T14R7C3'];
+  const captureKinds={T1R5C2:'role',T1R6C2:'role',T4R2C1:'manual',T8R2C1:'manual',...Object.fromEntries(artifactTargets.map(target=>[target,target==='T14R2C3'?'manual':'record']))};
+  const historyColumns=M.historyColumns,glossaryColumns=M.glossaryColumns,principleColumns=['name','direction','owner_artifact','measure'],rowKinds=['principle_rows','history_rows','glossary_rows'];
+  const authorKeys=['record_id','document_id','template','values','review','distribution','precedence','artifact_refs',...rowKinds,'capture_bindings','captures'];
+  const blankPayload=()=>({record_id:'',document_id:'',template:{...template},values:Object.fromEntries(valueTargets.map(target=>[target,''])),review:{date:'',interval:'',triggers:''},distribution:'',precedence:'',artifact_refs:Object.fromEntries(artifactTargets.map(target=>[target,''])),principle_rows:[],history_rows:[],glossary_rows:[],capture_bindings:Object.fromEntries(Object.keys(captureKinds).map(target=>[target,''])),captures:[]});
+  return freeze({source,template,catalogProjection,sections:C.sections,catalog:C.fields,roleTargets,narrativeTargets,valueTargets,artifactTargets,captureKinds,captureTargets:Object.keys(captureKinds),historyColumns,glossaryColumns,principleColumns,rowKinds,authorKeys,limits:{...M.limits,principleRows:100},editable:M.editable,retained:M.retained,sourceFields:M.sourceFields,blankPayload});
+});

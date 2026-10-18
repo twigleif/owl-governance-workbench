@@ -1,0 +1,14 @@
+/* Risk authoring ownership and exact native pin. Source bytes belong to ignored custody. */
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(require('./risk-document-catalog.js'),require('./document-schema.js'));else root.OWLRiskDocumentSchema=factory(root.OWLRiskDocumentCatalog,root.OWLDocumentSchema);})(globalThis,function(C,M){
+  'use strict';
+  const freeze=value=>{if(value&&typeof value==='object'){Object.values(value).forEach(freeze);Object.freeze(value);}return value;};
+  const source={id:'ai-risk-impact-procedure',name:'AI-Risk-and-Impact-Management-Procedure.docx',sha256:'79963d254f5f04a0497fbca473adab8de9ec0c6eea94beb5f0cb3a647bfe0b0b',paragraphs:144,tables:35,inputSurfaces:43,logicalInputs:43};
+  const template={id:source.id,sha256:source.sha256,catalog_sha256:'66ddb0ba0c9ef886361fd781793454671086561d984f40999f660525bc906735'};
+  const catalogProjection={source:{id:source.id,sha256:source.sha256,paragraphs:144,tables:35,inputSurfaces:43,logicalInputs:43},sections:C.sections.map(({key,label,paragraphs,tables})=>({key,label,paragraphs,tables})),targets:C.fields.map(({key,physical,section,kind,editable,binding,repeat,column,prototype,purpose})=>({key,physical,section,kind,editable,binding,repeat,column,prototype,purpose}))};
+  const roleTargets=['T1R5C2','T1R6C2'],narrativeTargets=['T5R2C1','T7R2C1','T8R2C1','T19R2C3','T19R3C3','T19R4C3','T19R5C3','T19R6C3','T19R7C3','T23R2C1','T27R2C1','T29R2C1','T31R2C1'],valueTargets=[...roleTargets,...narrativeTargets];
+  const captureKinds={T1R5C2:'role',T1R6C2:'role',T5R2C1:'role_reference',T7R2C1:'intake_reference',T19R2C3:'record_reference',T19R5C3:'record_reference'},captureTargets=Object.keys(captureKinds),componentOrder=['manual','policy','role','record'];
+  const rowKinds=['history_rows','glossary_rows'],authorKeys=['record_id','document_id','template','values','review','distribution',...rowKinds,'capture_bindings','captures'];
+  const referenceFields=['type','title','version','lifecycle','custody','location','access','subject_type','subject_id','origin','owner'];
+  const blankPayload=()=>({record_id:'',document_id:'',template:{...template},values:Object.fromEntries(valueTargets.map(target=>[target,''])),review:{date:'',interval:'',triggers:''},distribution:'',history_rows:[],glossary_rows:[],capture_bindings:Object.fromEntries(captureTargets.map(target=>[target,''])),captures:[]});
+  return freeze({source,template,catalogProjection,sections:C.sections,catalog:C.fields,referenceContext:C,roleTargets,narrativeTargets,valueTargets,captureKinds,captureTargets,componentOrder,rowKinds,authorKeys,referenceFields,historyColumns:M.historyColumns,glossaryColumns:M.glossaryColumns,limits:M.limits,editable:M.editable,retained:M.retained,sourceFields:M.sourceFields,artifactTargets:[],blankPayload});
+});
